@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build and Run allocator",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "allocator.c",
+        "main.c",
+        "-o",
+        "main.exe"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "Compile and run memory allocator",
+      "runOptions": {
+        "runOn": "success"
+      }
+    },
+    {
+      "label": "Run executable",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "chcp 65001 && main.exe & pause"
+      ],
+      "group": "test"
+    }
+  ]
+}
+
+
+
+
